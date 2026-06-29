@@ -1,7 +1,7 @@
 @echo off
 title Live Market - GitHub Setup & Push
 
-cd "D:\prdp\Data Analytics\Live-Market"
+cd /d "D:\prdp\Data Analytics\Live-Market"
 
 echo.
 echo ==========================================
