@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
 
+
 # Set up Chrome options
 options = Options()
 options.add_argument("--headless")  # run in background

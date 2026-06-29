@@ -14,7 +14,6 @@ FILE_PATH = r"D:\prdp\Data Analytics\Live-Market\Live-Market.csv"
 FETCH_INTERVAL = 300  # seconds
 RETRY_LIMIT = 5
 
-
 # -------- HELPERS --------
 def safe_fetch(ticker):
     """Fetches the latest live close price directly from Yahoo Finance API"""
