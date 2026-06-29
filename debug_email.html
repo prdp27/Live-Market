@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Template</title>
+  <style>
+    /* Mobile Responsiveness */
+    @media only screen and (max-width:600px) {
+      .mobile-hide { display:none !important; }
+      .stack-column { display:block !important; width:100% !important; max-width:100% !important; }
+      .stack-center { text-align:center !important; }
+      .mobile-padding { padding:15px !important; }
+      .mobile-text-center { text-align:center !important; }
+      .mobile-margin-bottom { margin-bottom:20px !important; }
+      .refer-card-mobile { width:280px !important; margin:0 auto 10px auto !important; }
+      .social-mobile { text-align:center !important; }
+      
+      .header-content, .footer-content {
+        padding: 20px !important;
+      }
+      
+      /* Reduce footer column spacing on mobile */
+      .footer-column {
+        padding: 15px 15px !important; /* Reduced from 30px to 15px top/bottom */
+      }
+      
+      .footer-column:first-child {
+        padding: 15px 15px 10px 15px !important; /* Even less bottom padding for first column */
+      }
+      
+      .footer-column:last-child {
+        padding: 10px 15px 15px 15px !important; /* Less top padding for last column */
+      }
+    }
+    
+    @media only screen and (max-width:480px) {
+      .header-content, .footer-content {
+        padding: 15px !important;
+      }
+      
+      /* Further reduce spacing on very small screens */
+      .footer-column {
+        padding: 10px 10px !important; /* Even smaller spacing */
+      }
+      
+      .footer-column:first-child {
+        padding: 10px 10px 8px 10px !important; 
+      }
+      
+      .footer-column:last-child {
+        padding: 8px 10px 10px 10px !important; 
+      }
+    }
+    .email-button{
+      background-color: #034361;
+      border-radius: 10px;
+      padding: 15px 22px;
+      font-weight: 600;
+      font-size: 16px;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+   .txn-details-container {
+    background-color: #F1F5F9;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #E2E8F0;
+}
+
+.txn-details-title {
+    font-size: 18px;
+    color: #1a1a1a;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.txn-details-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+}
+
+.txn-details-table-bordered {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #E2E8F0;
+    border-radius: 0 0 8px 8px;
+}
+
+.txn-details-table thead tr {
+    background-color: #F7F9FB;
+}
+
+.txn-details-table-bordered thead tr {
+    background-color: #F7F9FB;
+    border-top: 1px solid #E2E8F0;
+}
+
+
+.txn-details-row {
+    background-color: white;
+    border-top: 1px solid #E8EDF2;
+}
+
+.txn-details-th-cell {
+  padding: 16px;
+  font-size: 14px;
+  text-align: left;
+  color: #5A6C7D; 
+  font-weight: bold;
+}
+.txn-details-cell {
+    padding: 16px;
+    font-size: 14px;
+    color: #1E293B;
+    border-top: 1px solid #E8EDF2;
+}
+.txn-details-total-row {
+    background-color: #F6FBFE;
+    border-top: 1px solid #E2E8F0;
+}
+
+.txn-details-total-cell {
+    padding: 16px;
+    font-size: 16px;
+    color: #034361;
+    font-weight: 700;
+}
+
+.txn-details-total-empty {
+    padding: 16px;
+    font-size: 16px;
+    color: #034361;
+}
+  </style>
+ </head>
+ <body style="margin:0; padding:0; background-color:#ffffff; font-family: Arial, Helvetica, sans-serif;">
+  <!-- Header - Full Width -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#034361;">
+   <tbody>
+    <tr>
+     <td style="text-align:center; padding: 24px 20px;"><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cDovL3d3dy5sZW5kZW5jbHViLmNvbQ
+" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/Logo.png" alt="LendenClub" class="header-logo" width="200" height="44" style="margin:0 auto;"> </a></td>
+    </tr>
+   </tbody>
+  </table><!-- Main Container for Content -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:1440px; margin:0 auto; background-color:#ffffff;">
+   <!-- Content Block -->
+   <tbody>
+    <tr>
+     <td class="mobile-padding" style="padding: 20px 60px; font-size: 16px; line-height: 24px; word-wrap: break-word; overflow-wrap: break-word;">
+      <p>Dear PRADEEP KUMAR BAROLIA,</p>
+      <p>An amount of ₹5000.00 has been successfully credited to your LenDenClub account. The balance is now available for lending.</p>
+      <p>For any discrepancies, please contact us at <a href="mailto:support@lendenclub.com">support@lendenclub.com</a>.</p>
+      <p><br>
+        Regards,<br>
+        Team LenDenClub</p></td>
+    </tr>
+   </tbody>
+  </table><!-- Footer - Full Width -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#034361; padding:20px;">
+   <tbody>
+    <tr>
+     <td>
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:1440px; margin:0 auto;">
+       <tbody>
+        <tr>
+         <!-- Left Spacer -->
+         <td class="spacer-column" width="5%"></td><!-- Column 1 - LendenClub Info -->
+         <td class="footer-column stack-column" width="30%" valign="top" style="padding:30px 20px; color:#94A3B8; font-size:14px; line-height:20px;"><img src="https://ldc-prod-cms.lendenclub.com/Logo.png" alt="LendenClub" class="footer-logo" width="150" height="33" style="margin: 0 0 16px 0;">
+          <p class="footer-info" style="margin:0 0 20px 0; color:#94A3B8; font-size:14px; line-height:20px; max-width: 300px;">LendenClub, by Innofin Solutions Pvt Ltd (ISPL), is one of the fastest growing peer-to-peer (P2P) lending platforms in India.</p><!-- Social Media Icons -->
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" class="social-icons">
+           <tbody>
+            <tr>
+             <td style="padding-right: 12px;"><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly90d2l0dGVyLmNvbS9MZW5EZW5DbHVi
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/X.png" alt="X" width="20" height="20" style="display:block;"> </a></td>
+             <td style="padding-right: 12px;"><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2xlbmRlbmNsdWI
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/facebook.png" alt="Facebook" width="20" height="20" style="display:block;"> </a></td>
+             <td style="padding-right: 12px;"><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9sZW5kZW4uY2x1Yi8
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/instagram.png" alt="Instagram" width="20" height="20" style="display:block;"> </a></td>
+             <td style="padding-right: 12px;"><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvbGVuZGVuLWNsdWIv
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/linkedin.png" alt="LinkedIn" width="20" height="20" style="display:block;"> </a></td>
+             <td><a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly93d3cueW91dHViZS5jb20vQExlbkRlbkNsdWJPZmZpY2lhbA
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/youtube.png" alt="YouTube" width="20" height="20" style="display:block;"> </a></td>
+            </tr>
+           </tbody>
+          </table></td><!-- Column 2 - Refer & Earn Card -->
+         <td class="footer-column stack-column" width="35%" valign="middle" style="padding:30px 20px;">
+          <div class="refer-card-footer" style="text-align:center;">
+           <a href="https://trackerc.osend.in/EmailClickTracker?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqY2xpY2t8XnxhY29kZX58KkxlbmRlbl9tYWlsfF58cGNvZGV-
+fCpMZW5kZW5fbWFpbHxefGFpZH58KjcxNzg0NjAwMDAwMDAwfF58cGlkfnwqNzE3ODQ2MDAwMDAw
+MDB8XnxvcmlnfnwqaHR0cHM6Ly9hcHAubGVuZGVuY2x1Yi5jb20vd2ViLz9zbj1yZWZlcl9lYXJu
+" target="_blank" style="text-decoration:none;"> <img src="https://ldc-prod-cms.lendenclub.com/Footer+Banner+Mobile.png" width="540" height="auto" style="max-width:100%; height:auto;"> </a>
+          </div></td><!-- Column 3 - RBI Registered Badge -->
+         <td class="footer-column stack-column" width="25%" valign="middle" style="padding:30px 20px;">
+          <div class="rbi-badge" style="text-align:left;">
+           <img src="https://ldc-prod-cms.lendenclub.com/Footer+Desktop.png" alt="RBI Registered NBFC-P2P" width="140" height="auto" style="max-width:100%; height:auto;">
+          </div></td><!-- Right Spacer -->
+         <td class="spacer-column" width="5%"></td>
+        </tr>
+       </tbody>
+      </table></td>
+    </tr>
+   </tbody>
+  </table><!-- Disclaimer -->
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="max-width:1440px; margin:0 auto; background-color:#ffffff;">
+   <tbody>
+    <tr>
+     <td class="disclaimer-text" style="background-color:#ffffff; padding:24px 40px; text-align:center; font-size:13px; color:#64748B; line-height:20px;">
+      <p style="margin:0; max-width: 500px; margin: 0 auto;"><strong>Disclaimer:</strong> P2P lending is subject to risk. Any lending decisions taken by a lender on the basis of this information are at the discretion of the lender, and LendenClub does not guarantee that the loan amount will be recovered from the borrower.</p></td>
+    </tr>
+   </tbody>
+  </table>
+  <br>
+  <br><img alt="TrackerImage" src="https://trackero.osend.in/EmailOpenTracker/mImage?query=ZXNtZX58KjcxNzg0NjAwMDAwMDAwfF58Y2FtcGFpZ25-fCp8XnxjYW1wYWlnbklkfnwqfF58bUlk
+fnwqNTA2MDEyMDEwNzI4NjY2NzQwMXxefHRvfnwqcHJkcDI3QGdtYWlsLmNvbXxefGZyb21-fCpu
+b3JlcGx5QGxlbmRlbmNsdWIuY29tfF58cmVwbHlUb358Km5vcmVwbHlAbGVuZGVuY2x1Yi5jb218
+XnxzZW50QXR-fCoyMDI2LTA2LTEyfDAxOjA3OjI4fF58dGFnc358Km51bGx-bnVsbH5udWxsfm51
+bGx-bnVsbH5udWxsfm51bGx-bnVsbH5udWxsfm51bGx8XnxmaWxlSWR-fCp8XnxmaWxlTmFtZX58
+KnxefHRlbXBsYXRlSWR-fCp8XnxjcmVmfnwqMjAyNjYxMTE5MzcyOHxefHZlcnNpb25-fCpWRVJT
+SU9OXzF8XnxhY3Rpb25UeXBlfnwqb3BlbnxefGFjb2RlfnwqTGVuZGVuX21haWx8XnxwY29kZX58
+KkxlbmRlbl9tYWlsfF58YWlkfnwqNzE3ODQ2MDAwMDAwMDB8XnxwaWR-fCo3MTc4NDYwMDAwMDAw
+MA
+">
+ </body>
+</html>
