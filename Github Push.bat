@@ -19,7 +19,7 @@ if exist ".git" (
 
     git init
     git branch -M main
-    git remote add origin https://github.com/prdp27/Live-Market.git
+    git remote add origin https://github.com/prdp27/Live-Market
 )
 
 echo.
